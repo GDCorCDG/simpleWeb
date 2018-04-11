@@ -9,6 +9,9 @@ app.config.from_object('config')
 db = SQLAlchemy(app)
 lm = LoginManager(app)
 bf = Bootstrap(app)
-lm.login_view = "login"
+lm.login_view = "auth.login"
 
-from app import views,models
+
+
+
+from app import models
