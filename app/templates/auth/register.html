@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form method="post" name="login">
+    {{form.hidden_tag()}}
+    <p>username:{{ form.name(id='name') }}</p>
+    <p>email:{{ form.email(id='email') }}</p>
+    <p>password:{{ form.passwd(id='passwd') }}</p>
+    <p>password:{{ form.passwd2(id='passwd2') }}</p>
+    <p><button type="submit">注册</button></p>
+</form>
+{% endblock %}

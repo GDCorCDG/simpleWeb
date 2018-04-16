@@ -15,3 +15,8 @@ def index():
 @main.errorhandler(404)
 def not_found(error):
 	return "404 not found"
+
+@main.errorhandler(500)
+def internall_error(error):
+	db.session.rollback()
+	return '500 error'
